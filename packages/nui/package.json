@@ -1,0 +1,54 @@
+{
+  "name": "nui",
+  "description": "A Vue.js 3.0 UI library.",
+  "version": "0.1.0",
+  "author": "Allen <Allen@NUILibrary.online>",
+  "license": "MIT",
+  "homepage": "https://NUILibrary.online",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NUIlibrary/NUI.git",
+    "directory": "packages/nui"
+  },
+  "bugs":{
+    "url":"https://github.com/NUIlibrary/NUI/issues"
+  },
+  "keywords": [
+    "nui",
+    "ui framework",
+    "component framework",
+    "ui library",
+    "component library",
+    "vue framework"
+  ],
+  "scripts": {
+    "build:lib": "vue-cli-service build --target lib ./src/index.js --dest lib",
+    "test:unit": "vue-cli-service test:unit",
+    "lint": "vue-cli-service lint"
+  },
+  "main": "./lib/nui.common.js",
+  "files": [
+    "lib/"
+  ],
+  "dependencies": {
+    "core-js": "^3.6.5"
+  },
+  "peerDependencies": {
+    "vue": "^3.0.0"
+  },
+  "devDependencies": {
+    "@vue/cli-plugin-babel": "~4.5.0",
+    "@vue/cli-plugin-eslint": "~4.5.0",
+    "@vue/cli-plugin-unit-jest": "~4.5.0",
+    "@vue/cli-service": "~4.5.0",
+    "@vue/compiler-sfc": "^3.0.0",
+    "@vue/test-utils": "^2.0.0-0",
+    "babel-eslint": "^10.1.0",
+    "eslint": "^6.7.2",
+    "eslint-plugin-vue": "^7.0.0",
+    "stylus": "^0.54.7",
+    "stylus-loader": "^3.0.2",
+    "typescript": "~3.9.3",
+    "vue-jest": "^5.0.0-0"
+  }
+}
