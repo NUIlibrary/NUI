@@ -1,29 +1,20 @@
-# nui
+# NUI
 
-## Project setup
-```
-npm install
-```
+## Download & Use
 
-### Compiles and hot-reloads for development
-```
-npm run serve
+### Download
+
+```shell
+npm install @nuilibrary/nui --save 
 ```
 
-### Compiles and minifies for production
-```
-npm run build
+### Use
+
+In the main file of the project
+
+```javascript
+import NUI from '@nuilibrary/nui';
+
+createApp(App).use(NUI).mount('#app');
 ```
 
-### Run your unit tests
-```
-npm run test:unit
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).

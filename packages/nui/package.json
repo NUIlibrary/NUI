@@ -1,5 +1,5 @@
 {
-  "name": "nui",
+  "name": "@nuilibrary/nui",
   "description": "A Vue.js 3.0 UI library.",
   "version": "0.1.0",
   "author": "Allen <Allen@NUILibrary.online>",
