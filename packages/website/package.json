@@ -1,5 +1,5 @@
 {
-  "name": "NUILibrary.online",
+  "name": "nuilibrary.online",
   "description": "NUI's website.",
   "version": "0.1.0",
   "author": "Allen <Allen@NUILibrary.online>",
@@ -11,6 +11,7 @@
   },
   "dependencies": {
     "core-js": "^3.6.5",
+    "markdown-it": "^12.0.4",
     "register-service-worker": "^1.7.1",
     "vue": "^3.0.0",
     "vue-router": "^4.0.0-0",
