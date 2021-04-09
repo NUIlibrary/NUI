@@ -26,7 +26,7 @@
     "test:unit": "vue-cli-service test:unit",
     "lint": "vue-cli-service lint"
   },
-  "main": "./lib/nui.common.js",
+  "main": "./lib/nui.umd.js",
   "files": [
     "lib/"
   ],
