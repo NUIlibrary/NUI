@@ -1,7 +1,7 @@
 {
   "name": "@nuilibrary/nui",
   "description": "A Vue.js 3.0 UI library.",
-  "version": "0.1.0",
+  "version": "0.0.1",
   "author": "Allen <Allen@NUILibrary.online>",
   "license": "MIT",
   "homepage": "https://NUILibrary.online",
@@ -10,8 +10,8 @@
     "url": "git+https://github.com/NUIlibrary/NUI.git",
     "directory": "packages/nui"
   },
-  "bugs":{
-    "url":"https://github.com/NUIlibrary/NUI/issues"
+  "bugs": {
+    "url": "https://github.com/NUIlibrary/NUI/issues"
   },
   "keywords": [
     "nui",

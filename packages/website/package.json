@@ -1,14 +1,14 @@
 {
   "name": "nuilibrary.online",
   "description": "NUI's website.",
-  "version": "0.1.0",
+  "version": "0.0.1",
   "author": "Allen <Allen@NUILibrary.online>",
   "private": true,
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
-    "docs:dir":"node ./scripts/generateDocsDir.js"
+    "docs:dir": "node ./scripts/generateDocsDir.js"
   },
   "dependencies": {
     "core-js": "^3.6.5",
