@@ -1,4 +1,9 @@
 {
   "Button": "Button.md",
-  "DowloadAndUse": "DowloadAndUse.md"
+  "Card": "Card.md",
+  "Dowload&Use": "Dowload&Use.md",
+  "GridSystem": "GridSystem.md",
+  "Icon": "Icon.md",
+  "Link": "Link.md",
+  "Theme&Color": "Theme&Color.md"
 }

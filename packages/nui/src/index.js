@@ -1,4 +1,4 @@
-// import './styles/index.styl';
+import './styles/index.styl';
 // import * as components from './components'
 import Example from './components/Example';
 

@@ -1,4 +1,4 @@
-# 下载与使用
+# Dowload and Use 下载与使用
 
 ## 下载
 
@@ -15,3 +15,4 @@ import NUI from '@nuilibrary/nui';
 
 createApp(App).use(NUI).mount('#app');
 ```
+
