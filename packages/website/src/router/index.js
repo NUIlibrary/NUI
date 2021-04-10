@@ -10,7 +10,7 @@ let userLanguage = localStorage.getItem('NUI_LANGUAGE')
 
 const routes = [
   {
-    path: '/home',
+    path: '/',
     name: 'Home',
     component: Home
   },
@@ -24,6 +24,10 @@ const routes = [
     name: 'Docs',
     component: Docs,
     children: generateRutersByDir(userLanguage)
+  },
+  {
+    path: '/:pathMatch(.*)*',
+    redirect: '/'
   }
 ]
 
