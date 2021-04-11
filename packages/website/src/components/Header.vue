@@ -1,7 +1,7 @@
 <template>
   <div class="header">
     <h1 @click="$router.push({ name: 'Home' })" class="nav-left">
-      <img src="@/assets/logo_white.png" class="logo" />UI
+      <img src="@/assets/logo.png" class="logo" />UI
     </h1>
     <div class="nav-right">
       <p>
@@ -47,7 +47,6 @@ export default {
 <style lang="stylus" scoped>
 .logo {
   max-height: 5rem;
-  filter: invert(100%);
 }
 
 .temp-h2 {
