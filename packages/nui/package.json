@@ -22,7 +22,7 @@
     "vue framework"
   ],
   "scripts": {
-    "build:lib": "vue-cli-service build --target lib ./src/index.js --dest lib",
+    "build": "vue-cli-service build --target lib ./src/index.js --dest lib",
     "test:unit": "vue-cli-service test:unit",
     "lint": "vue-cli-service lint"
   },

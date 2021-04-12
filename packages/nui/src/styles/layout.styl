@@ -1,0 +1,81 @@
+.n-container {
+  display: grid;
+}
+
+.n-row {
+  display: flex;
+  width: 100%;
+  box-sizing: border-box;
+
+  &::after {
+    clear: both;
+    display: table;
+    content: '';
+  }
+
+  // [attribute] : justify
+  // [description] : flex 布局下的水平排列方式
+  // [type] : string
+  // [val] : start/end/center/space-around/space-between
+  $nui-row-justify-content = flex-start, flex-end, center, space-around, space-between, space-evenly;
+
+  for $i-val in $nui-row-justify-content {
+    &.justify-content-{$i-val} {
+      justify-content: $i-val;
+    }
+  }
+
+  // [attribute] : align
+  // [description] : flex 布局下的垂直排列方式
+  // [type] : string
+  // [val] : flex-start/flex-end/center/baseline/stretch
+  $nui-row-align-items = flex-start, flex-end, center, baseline, stretch;
+
+  for $i-val in $nui-row-align-items {
+    &.align-items-{$i-val} {
+      align-items: $i-val;
+    }
+  }
+
+  .n-col {
+    // 复用函数
+    $f-col-width($name) {
+      for $i-num in 1...21 {
+        &.{$name}-{$i-num} {
+          width: $i-num * 5%;
+        }
+      }
+    }
+
+    $f-col-width('span');
+    // 媒体查询变量
+    $nui-media = {
+      xs: {
+        type: 'max-width',
+        value: 767px
+      },
+      sm: {
+        type: 'min-width',
+        value: 768px
+      },
+      md: {
+        type: 'min-width',
+        value: 992px
+      },
+      ls: {
+        type: 'min-width',
+        value: 1200px
+      },
+      xl: {
+        type: 'min-width',
+        value: 1920px
+      }
+    };
+
+    for $i-key, $i-value in $nui-media {
+      @media only screen and ({$i-value['type']}: $i-value['value']) {
+        $f-col-width($i-key);
+      }
+    }
+  }
+}

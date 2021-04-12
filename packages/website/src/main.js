@@ -3,6 +3,6 @@ import App from './App.vue'
 import './registerServiceWorker'
 import router from './router'
 import store from './store'
-import NUI from '../../nui/src/index'
+import nui from './plugins/nui'
 
-createApp(App).use(store).use(router).use(NUI).mount('#app')
+createApp(App).use(store).use(router).use(nui).mount('#app')
