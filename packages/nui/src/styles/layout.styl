@@ -48,29 +48,6 @@
     }
 
     $f-col-width('span');
-    // 媒体查询变量
-    $nui-media = {
-      xs: {
-        type: 'max-width',
-        value: 767px
-      },
-      sm: {
-        type: 'min-width',
-        value: 768px
-      },
-      md: {
-        type: 'min-width',
-        value: 992px
-      },
-      ls: {
-        type: 'min-width',
-        value: 1200px
-      },
-      xl: {
-        type: 'min-width',
-        value: 1920px
-      }
-    };
 
     for $i-key, $i-value in $nui-media {
       @media only screen and ({$i-value['type']}: $i-value['value']) {
