@@ -3,13 +3,12 @@ const MarkdownItContainer = require('markdown-it-container');
 const hljs = require('highlight.js');
 // 自定义的 container 配置
 const ContainerBadge = require('./container-badge');
-const ContainerDemo = require('./container-demo');
 
-module.exports = function(src) {
+module.exports = function (src) {
   const md = MarkdownIt({
-    content: true,
+    html: true,
     typographer: true,
-    highlight: function(str, lang) {
+    highlight: function (str, lang) {
       if (lang && hljs.getLanguage(lang)) {
         try {
           return (
@@ -26,11 +25,7 @@ module.exports = function(src) {
     },
   });
 
-  md.use(MarkdownItContainer, 'badge', ContainerBadge(md)).use(
-    MarkdownItContainer,
-    'demo',
-    ContainerDemo(md)
-  );
+  md.use(MarkdownItContainer, 'badge', ContainerBadge(md));
 
   const html = md.render(src);
 
