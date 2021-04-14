@@ -18,6 +18,12 @@ npm install @nuilibrary/nui --save
 
 :::
 
+::: badge-warn 全量引入和按需引入
+
+目前，NUI 仅支持全量引入，按需引入功能后续上线。
+
+:::
+
 ### 类安装
 
 在项目的`main.js`文件中

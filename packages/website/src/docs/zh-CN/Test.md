@@ -1,7 +1,7 @@
 # 测试文档
 
 ::: demo 这是一段代码
-```
+```vue
 <div>
 Test
 <n-example></n-example>
