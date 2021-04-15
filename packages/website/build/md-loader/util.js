@@ -12,7 +12,7 @@ function stripScript(content) {
 }
 
 function stripStyle(content) {
-  const result = content.match(/<(style)>([\s\S]+)<\/\1>/);
+  const result = content.match(/<(style[\s+scoped]*)*>([\s\S]+)<\/style>/);
   return result && result[2] ? result[0].trim() : '';
 }
 

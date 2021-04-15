@@ -8,7 +8,8 @@
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
-    "docs:dir": "node ./scripts/generateDocsDir.js"
+    "docs:dir": "node ./scripts/generateDocsDir.js",
+    "docs:clear":"node ./scripts/clearDocComponents.js"
   },
   "dependencies": {
     "core-js": "^3.6.5",

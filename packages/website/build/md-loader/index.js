@@ -5,13 +5,9 @@ const hljs = require('highlight.js');
 // 自定义的 container 配置
 const ContainerBadge = require('./container-badge');
 const ContainerDemo = require('./container-demo');
-const { stripTemplate, stripScript ,stripStyle} = require('./util');
-
-let id = 0; // demo 的 id
+const { stripTemplate, stripScript, stripStyle } = require('./util');
 
 module.exports = function(src) {
-  console.log("Markdown 开始分割线----------\n");
-  console.log(`第 ${id} 次循环`);
   const md = MarkdownIt({
     html: true,
     typographer: true,
@@ -27,7 +23,9 @@ module.exports = function(src) {
       }
 
       return (
-        '<pre class="hljs" v-pre><code>' + md.utils.escapeHtml(str) + '</code></pre>'
+        '<pre class="hljs" v-pre><code>' +
+        md.utils.escapeHtml(str) +
+        '</code></pre>'
       );
     },
   });
@@ -43,7 +41,6 @@ module.exports = function(src) {
   const endTag = ':nui-demo-show-->';
   const endTagLen = endTag.length;
 
-  // let componenetsString = '';
   let output = []; // 输出的内容
   let start = 0; // 字符串开始位置
 
@@ -60,7 +57,13 @@ module.exports = function(src) {
     const html = stripTemplate(commentContent); // demo 中纯 html 代码块
     const script = stripScript(commentContent); // demo 中纯 script 代码块
     const style = stripStyle(commentContent); // demo 中纯 style 代码块
-    const demoComponentName = `NuiDemo${id}`; // 组件名
+    const demoComponentName = `Nuidemo${content
+      .replace(/[^a-zA-Z]/g, '')
+      .slice(0, 10)
+      .toLowerCase()}${html
+      .replace(/[^a-zA-Z]/g, '')
+      .slice(0, 20)
+      .toLowerCase()}${commentStart}`; // 组件名
     // 将上述代码块写入组件文件
     fs.writeFile(
       `./src/docComponents/${demoComponentName}.vue`,
@@ -75,15 +78,12 @@ module.exports = function(src) {
     output.push(`<template v-slot:show><${demoComponentName} /></template>`);
 
     // 重新计算下一次的位置
-    id++;
     start = commentEnd + endTagLen;
     commentStart = content.indexOf(startTag, start);
     commentEnd = content.indexOf(endTag, commentStart + startTagLen);
   }
 
   output.push(content.slice(start));
-
-  console.log("Markdown 结束分割线----------\n");
 
   return `
   <template>
