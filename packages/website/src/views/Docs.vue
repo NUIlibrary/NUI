@@ -1,11 +1,20 @@
 <template>
-  <div>
-    <span v-for="(val, key, index) in docsDir" :key="index">
-      <span @click="$router.push({ name: `Docs${key}` })">{{ key }}</span>
-      <span v-if="index != Object.keys(docsDir).length - 1"> | </span>
-    </span>
-  </div>
-  <router-view></router-view>
+  <n-row :gutter="10">
+    <n-col :span="3">
+      <div class="nav">
+        <p
+          v-for="(val, key, index) in docsDir"
+          :key="index"
+          @click="$router.push({ name: `Docs${key}` })"
+        >
+          {{ key }}
+        </p>
+      </div>
+    </n-col>
+    <n-col :span="17">
+      <router-view />
+    </n-col>
+  </n-row>
 </template>
 
 <script>
@@ -19,3 +28,12 @@ export default {
   },
 };
 </script>
+
+<style lang="stylus" scoped>
+.nav {
+  border: 1px solid #ccc;
+  word-break: break-all;
+  word-wrap: break-word;
+  padding 0.2rem
+}
+</style>
