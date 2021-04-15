@@ -8,7 +8,7 @@ module.exports = {
       .loader('vue-loader-v16')
       .end()
       .use('md-loader')
-      .loader('./md-loader/index.js')
+      .loader('./build/md-loader/index.js')
       .end()
   }
 }
