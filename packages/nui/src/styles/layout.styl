@@ -4,6 +4,7 @@
 
 .n-row {
   display: flex;
+  flex-wrap: wrap;
   width: 100%;
   box-sizing: border-box;
 
@@ -38,6 +39,8 @@
   }
 
   .n-col {
+    box-sizing: border-box;
+    
     // 复用函数
     $f-col-width($name) {
       for $i-num in 1...21 {

@@ -48,7 +48,7 @@ export default {
         this.$props.ls ? `ls-${this.$props.ls}` : '',
         this.$props.xl ? `xl-${this.$props.xl}` : '',
       ],
-      style: this.gutter ? `margin:0 ${this.gutter / 2}px` : ''
+      style: this.gutter ? `padding:0 ${this.gutter / 2}px` : ''
     }, this.$slots.default?.());
   }
 }
