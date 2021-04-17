@@ -1,10 +1,19 @@
-$color-red = #111111;
-$color-orange = #111111;
-$color-yellow = #111111;
-$color-green = #111111;
-$color-blue = #111111;
-$color-purple = #111111;
-$color-white = #FFFFFF;
-$color-black = #000000;
-$color-gray = #9E9E9E;
-$color-teal = #009688;
+for $i-key, $i-value in $nui-color {
+  .bg-{$i-color} {
+    background-color: s('var(%s-%s)', $i-value, $i);
+  }
+
+  .text-{$i-color} {
+    color: s('var(%s-%s)', $i-value, $i);
+  }
+
+  for $i in 1...6 {
+    .bg-{$i-key}-{$i} {
+      background-color: s('var(%s-%s)', $i-value, $i);
+    }
+
+    .text-{$i-key}-{$i} {
+      color: s('var(%s-%s)', $i-value, $i);
+    }
+  }
+}

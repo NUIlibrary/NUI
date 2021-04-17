@@ -4,21 +4,23 @@
 </template>
 
 <script>
-import Header from '@/components/Header.vue';
+import Header from "@/components/Header.vue";
 export default {
   components: { Header },
 };
 </script>
 
 <style lang="stylus">
-*{
-  font-family:'PingFang SC','San Francisco',STXihei, SimSun;
+* {
+  font-family: 'PingFang SC', 'San Francisco', STXihei, SimSun;
 }
-pre{
-  code{
+
+pre {
+  code {
     font-family: Menlo, Monaco, 'Courier New', monospace, 'Source Code Pro for Powerline';
   }
 }
+
 .badge {
   border-color: #42b983;
   background-color: #f8f8f8;

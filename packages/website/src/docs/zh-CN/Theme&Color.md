@@ -4,7 +4,7 @@
 
 NUI 颜色系统设计思路是这样的：
 
-1. 提供丰富、自有的基本颜色库；
+1. 提供丰富、自由的基本颜色库；
 2. 在基本颜色库的基础上，挑选颜色组建为主题；
 3. 无论是在开发环境和生产环境，都允许修改颜色库与主题；
 
@@ -14,10 +14,58 @@ NUI 选取了自然界部分颜色，作为基本颜色，加入基本颜色库�
 
 预置的基本颜色库，允许被修改。同时，也允许往基本颜色库中加入新的颜色。
 
-| 类名                 | 用途     | 效果 |
-| -------------------- | -------- | ---- |
-| `--bg-c-colorname`   | 背景颜色 |      |
-| `--text-c-colorname` | 文本颜色 |      |
+| 类名             | 用途     |
+| ---------------- | -------- |
+| `bg-colorname`   | 背景颜色 |
+| `text-colorname` | 文本颜色 |
+
+:::demo 使用`bg-color`类名设定元素的背景颜色
+
+```html
+<n-row>
+  <template v-for="(colorName,index) in colorNameSet" :key="index">
+    <n-col
+      v-for="i in 5"
+      :key="i"
+      :span="2"
+      :class="`bg-${colorName}-${i}`"
+    ></n-col>
+  </template>
+</n-row>
+
+<script>
+  export default {
+    data() {
+      return {
+        colorNameSet: [
+          'red',
+          'orange',
+          'yellow',
+          'chartreuse',
+          'green',
+          'spring',
+          'cyan',
+          'sky',
+          'blue',
+          'purple',
+          'magenta',
+          'pink',
+          'white',
+          'black'
+        ],
+      };
+    },
+  };
+</script>
+
+<style scoped>
+  .n-col {
+    height: 50px;
+  }
+</style>
+```
+
+:::
 
 ## 主题
 
@@ -26,4 +74,3 @@ NUI 选取了自然界部分颜色，作为基本颜色，加入基本颜色库�
 ## 在开发环境修改颜色库与主题
 
 ## 在生产环境修改颜色库与主题
-
