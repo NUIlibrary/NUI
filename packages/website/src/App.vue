@@ -1,6 +1,8 @@
 <template>
-  <Header />
-  <router-view />
+  <div>
+    <Header v-show="$route.name !== 'Home'" />
+    <router-view />
+  </div>
 </template>
 
 <script>
@@ -11,9 +13,6 @@ export default {
 </script>
 
 <style lang="stylus">
-* {
-  font-family: 'PingFang SC', 'San Francisco', STXihei, SimSun;
-}
 
 pre {
   code {

@@ -1,0 +1,59 @@
+{
+  "color": {
+    "red": "#FF3D3D",
+    "orange": "#FF9E3D",
+    "yellow": "#FFFF3D",
+    "chartreuse": "#9FFF3D",
+    "green": "#3EFF3D",
+    "spring": "#3DFF9D",
+    "cyan": "#3DFEFF",
+    "sky": "#3D9DFF",
+    "blue": "#3E3DFF",
+    "purple": "#9F3DFF",
+    "magenta": "#FF3DFF",
+    "pink": "#FF3D9E",
+    "white": "#DDDDDD",
+    "black": "#333333",
+    "primary":"#4fc08d",
+    "gray":"#f6f6f6",
+    "dark":"#4f5959",
+    "text-dark":"#2c3e50",
+    "text-light":"#ffffff"
+  },
+  "break": {
+    "xs": {
+      "type": "max-width",
+      "value": "768px"
+    },
+    "sm": {
+      "type": "min-width",
+      "value": "768px"
+    },
+    "md": {
+      "type": "min-width",
+      "value": "992px"
+    },
+    "ls": {
+      "type": "min-width",
+      "value": "1200px"
+    },
+    "xl": {
+      "type": "min-width",
+      "value": "1920px"
+    }
+  },
+  "themes": {
+    "light": {
+      "primary": "sky",
+      "secondary": "cyan",
+      "accent": "blue",
+      "error": "red",
+      "info": "",
+      "success": "spring",
+      "warning": "orange",
+      "text-light": "",
+      "text-dark": "",
+      "bg": ""
+    }
+  }
+}

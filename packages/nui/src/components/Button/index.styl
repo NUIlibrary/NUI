@@ -1,0 +1,21 @@
+.n-button {
+  display: inline-block;
+  border: 0;
+  outline: 0;
+  padding: 0.5rem 1.5rem;
+  border-radius: 9999px;
+  letter-spacing: 0.05rem;
+  text-transform: uppercase;
+  place-items: center center;
+  white-space: nowrap;
+  font-weight: 700;
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  &.disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+}

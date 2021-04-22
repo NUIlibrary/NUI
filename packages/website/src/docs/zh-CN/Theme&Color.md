@@ -22,15 +22,23 @@ NUI 选取了自然界部分颜色，作为基本颜色，加入基本颜色库�
 :::demo 使用`bg-color`类名设定元素的背景颜色
 
 ```html
-<n-row>
-  <template v-for="(colorName,index) in colorNameSet" :key="index">
+<n-row v-for="(colorName,index) in colorNameSet" :key="index">
     <n-col
       v-for="i in 5"
       :key="i"
-      :span="2"
-      :class="`bg-${colorName}-${i}`"
-    ></n-col>
-  </template>
+      :span="4"
+      :class="`bg-${colorName}-lighten${6-i}`"
+           >{{`bg-${colorName}-lighten${6-i}`}}</n-col>
+    <n-col
+      :span="20"
+      :class="`bg-${colorName}`"
+           >{{`bg-${colorName}`}}</n-col>
+    <n-col
+      v-for="i in 5"
+      :key="i"
+      :span="4"
+      :class="`bg-${colorName}-darken${i}`"
+           >{{`bg-${colorName}-darken${i}`}}</n-col>
 </n-row>
 
 <script>

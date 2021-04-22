@@ -1,7 +1,86 @@
-@import 'define.styl'
-@import 'layout.styl'
-@import 'color.styl'
-// 以 $nui- 开头的变量为内部变量或临时变量
-// 以 $n- 开头的变量为公开变量或复用变量
-// 以 $f- 开头的为函数
-// 以 $i- 开头的为循环体内的变量
+$NUI = json('./define.json', { hash: true });
+
+@import 'layout.styl';
+@import 'color.styl';
+
+html {
+  background-color: #fefefe;
+  color: var(--nui-color-text-dark);
+  font-size: 16px;
+}
+
+h1 {
+  font-size: 3.2rem;
+  font-weight: 300;
+}
+
+h2 {
+  font-size: 2.4rem;
+  font-weight: 500;
+}
+
+for $i in 1...21 {
+  .mt-{$i} {
+    margin-top: ($i * 4) px;
+  }
+
+  .mb-{$i} {
+    margin-bottom: ($i * 4) px;
+  }
+
+  .ml-{$i} {
+    margin-left: ($i * 4) px;
+  }
+
+  .mr-{$i} {
+    margin-right: ($i * 4) px;
+  }
+
+  .my-{$i} {
+    margin-top: ($i * 4) px;
+    margin-bottom: ($i * 4) px;
+  }
+
+  .mx-{$i} {
+    margin-left: ($i * 4) px;
+    margin-right: ($i * 4) px;
+  }
+
+  .pt-{$i} {
+    padding-top: ($i * 4) px;
+  }
+
+  .pb-{$i} {
+    padding-bottom: ($i * 4) px;
+  }
+
+  .pl-{$i} {
+    padding-left: ($i * 4) px;
+  }
+
+  .pr-{$i} {
+    padding-right: ($i * 4) px;
+  }
+
+  .py-{$i} {
+    padding-top: ($i * 4) px;
+    padding-bottom: ($i * 4) px;
+  }
+
+  .px-{$i} {
+    padding-left: ($i * 4) px;
+    padding-right: ($i * 4) px;
+  }
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-right {
+  text-align: right;
+}

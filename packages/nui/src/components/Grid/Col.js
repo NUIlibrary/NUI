@@ -45,7 +45,7 @@ export default {
         this.$props.xs ? `xs-${this.$props.xs}` : '',
         this.$props.sm ? `sm-${this.$props.sm}` : '',
         this.$props.md ? `md-${this.$props.md}` : '',
-        this.$props.ls ? `ls-${this.$props.ls}` : '',
+        this.$props.lg ? `ls-${this.$props.lg}` : '',
         this.$props.xl ? `xl-${this.$props.xl}` : '',
       ],
       style: this.gutter ? `padding:0 ${this.gutter / 2}px` : ''

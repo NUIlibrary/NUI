@@ -1,5 +1,11 @@
+:root {
+  for $key, $value in $NUI.break {
+    --nui-break-{$key}: ($value['value']);
+  }
+}
+
 .n-container {
-  display: grid;
+  padding: 1rem;
 }
 
 .n-row {
@@ -40,7 +46,7 @@
 
   .n-col {
     box-sizing: border-box;
-    
+
     // 复用函数
     $f-col-width($name) {
       for $i-num in 1...21 {
@@ -52,9 +58,11 @@
 
     $f-col-width('span');
 
-    for $i-key, $i-value in $nui-media {
-      @media only screen and ({$i-value['type']}: $i-value['value']) {
-        $f-col-width($i-key);
+    for $key, $value in $NUI.break {
+      // TODO: 媒体查询中不能使用CSS变量？
+      // @media only screen and ({$value['type']}: s('var(--nui-break-' + $key + ')')) {
+      @media only screen and ({$value.type}: $value.value) {
+        $f-col-width($key);
       }
     }
   }
