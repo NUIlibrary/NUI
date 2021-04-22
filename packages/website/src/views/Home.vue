@@ -1,7 +1,7 @@
 <template>
   <div class="home text-center">
     <div class="hero mt-10 mb-20">
-      <img src="@/assets/logo.png" alt="logo" />
+      <img src="@/assets/logo.png" alt="logo" width="150" />
       <h1>NUI</h1>
       <h2>一个 Vue.js 3.0 UI 库</h2>
       <n-button
@@ -9,6 +9,14 @@
         @click="$router.push({ name: 'DocsDownload&Use' })"
         >快速上手</n-button
       >
+      <n-button
+        color="primary"
+        plain
+        href="https://github.com/NUIlibrary/awesome-nui"
+      >
+        <n-icon>github-fill</n-icon>
+        Awesome NUI
+      </n-button>
     </div>
     <n-row :gutter="10">
       <n-col :md="5" :sm="10" :ms="20">
@@ -42,11 +50,10 @@
         <n-card>
           <n-card-title class="text-primary">高响应式</n-card-title>
           <n-card-text>
-            不只是屏幕尺寸，NUI 提供的响应式包括系统主题、颜色等响应式。
+            不仅仅是屏幕尺寸，NUI 提供的响应式包括系统主题、颜色等响应式。
           </n-card-text>
         </n-card>
       </n-col>
     </n-row>
   </div>
 </template>
-

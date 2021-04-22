@@ -22,7 +22,10 @@ export default {
       {
         class: [
           'n-button',
-          `bg-${this.$props.color}`,
+          `border-${this.$props.color}`,
+          this.$props.plain
+            ? `text-${this.$props.color}`
+            : `bg-${this.$props.color}`,
           { disabled: this.$props.disabled },
         ],
       },
