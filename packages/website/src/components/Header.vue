@@ -1,36 +1,38 @@
 <template>
-  <div class="header">
-    <h1 @click="$router.push({ name: 'Home' })" class="nav-left">
-      <img src="@/assets/logo.png" class="logo" />UI
-    </h1>
-    <div class="nav-right">
-      <p>
-        <span class="temp-h2">Languages: </span>
-        <span @click="setLanguage('zh-CN')">中文 </span>
-        <span @click="setLanguage('en-US')">English </span>
-      </p>
-      <p>
-        <span class="temp-h2">Link: </span>
-        <span>
-          <a href="https://github.com/NUIlibrary/NUI" target="blank">GitHub </a>
-        </span>
-        <span>
-          <a href="https://www.npmjs.com/package/@nuilibrary/nui" target="blank"
-            >npm
-          </a>
-        </span>
-        <span>
-          <a href="https://NUILibrary.online" target="blank">Website </a>
-        </span>
-      </p>
-      <p>
-        <span class="temp-h2">Navigation: </span>
-        <span @click="$router.push({ name: 'Docs' })">Docs </span>
-        <span @click="$router.push({ name: 'Test' })">Test </span>
-      </p>
-    </div>
-    <hr />
-  </div>
+  <n-row
+    class="header shadow-3 px-5 pt-1 mb-5"
+    justify="space-evenly"
+    align="center"
+  >
+    <n-col :span="5" @click="$router.push({ name: 'Home' })">
+      <img src="@/assets/logo.png" class="logo" />
+      <span class="hero-2">UI</span>
+    </n-col>
+    <n-col :span="3">
+      <span class="temp-h2">Languages: </span>
+      <span @click="setLanguage('zh-CN')">中文 </span>
+      <span @click="setLanguage('en-US')">English </span>
+    </n-col>
+    <n-col :span="3"
+      >Link:
+      <n-link
+        color="primary"
+        href="https://github.com/NUIlibrary/NUI"
+        target="blank"
+      >
+        <n-icon i="github-fill" />
+        GitHub
+      </n-link>
+      <n-link
+        color="primary"
+        href="https://www.npmjs.com/package/@nuilibrary/nui"
+        target="blank"
+      >
+        <n-icon i="N" />
+        npm
+      </n-link>
+    </n-col>
+  </n-row>
 </template>
 
 <script>
@@ -45,20 +47,9 @@ export default {
 </script>
 
 <style lang="stylus" scoped>
-.logo {
-  max-height: 5rem;
-}
-
-.temp-h2 {
-  font-weight: 900;
-  font-size: 1.2rem;
-}
-
-[class^='nav-'] {
-  display: inline-block;
-}
-
-.nav-left {
-  margin-right: 2rem;
+.header{
+  img{
+    height 2.5rem
+  }
 }
 </style>

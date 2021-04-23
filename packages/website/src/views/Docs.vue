@@ -12,13 +12,15 @@
       </div>
     </n-col>
     <n-col :span="17">
-      <router-view />
+      <div class="px-20">
+        <router-view />
+      </div>
     </n-col>
   </n-row>
 </template>
 
 <script>
-import docsDir from "@/docs/docsDir.json";
+import docsDir from '@/docs/docsDir.json';
 
 export default {
   data() {

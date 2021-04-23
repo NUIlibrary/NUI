@@ -12,12 +12,12 @@
 
 ## Row 属性
 
-| 参数    | 说明                 | 类型   | 可选值                                      | 默认值     |
-| ------- | -------------------- | ------ | ------------------------------------------- | ---------- |
-| tab     | 渲染出的实际标签     | String | -                                           | div        |
-| justify | 子元素的水平对齐方式 | String | start/end/center/space-around/space-between | flex-start |
-| align   | 子元素的垂直对齐方式 | String | flex-start/flex-end/center/baseline/stretch | flex-start |
-| gutter  | 子元素间的间隔       | Number | （0,+♾️)                                     | -          |
+| 参数    | 说明                 | 类型   | 可选值                                                | 默认值     |
+| ------- | -------------------- | ------ | ----------------------------------------------------- | ---------- |
+| tab     | 渲染出的实际标签     | String | -                                                     | div        |
+| justify | 子元素的水平对齐方式 | String | flex-start/flex-end/center/space-around/space-between | flex-start |
+| align   | 子元素的垂直对齐方式 | String | flex-start/flex-end/center/baseline/stretch           | flex-start |
+| gutter  | 子元素间的间隔       | Number | （0,+♾️)                                               | -          |
 
 ## Col 属性
 

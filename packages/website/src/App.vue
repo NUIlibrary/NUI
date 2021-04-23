@@ -1,12 +1,14 @@
 <template>
   <div>
-    <Header v-show="$route.name !== 'Home'" />
-    <router-view />
+    <Header />
+    <n-container>
+      <router-view />
+    </n-container>
   </div>
 </template>
 
 <script>
-import Header from "@/components/Header.vue";
+import Header from '@/components/Header.vue';
 export default {
   components: { Header },
 };

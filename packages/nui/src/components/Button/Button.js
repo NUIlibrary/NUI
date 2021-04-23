@@ -15,10 +15,16 @@ export default {
       type: Boolean,
       default: false,
     },
+    href: {
+      type: String,
+    },
+    target: {
+      type: String,
+    },
   },
   render() {
     return h(
-      'div',
+      this.$props.href ? 'a' : 'div',
       {
         class: [
           'n-button',
@@ -28,6 +34,8 @@ export default {
             : `bg-${this.$props.color}`,
           { disabled: this.$props.disabled },
         ],
+        href: this.$props.href ? this.$props.href : null,
+        target: this.$props.target ? this.$props.target : null,
       },
       this.$slots.default?.()
     );

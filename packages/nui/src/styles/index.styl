@@ -1,5 +1,6 @@
 $NUI = json('./define.json', { hash: true });
 
+@import 'reset.styl';
 @import 'layout.styl';
 @import 'color.styl';
 
@@ -9,12 +10,12 @@ html {
   font-size: 16px;
 }
 
-h1 {
+.hero-1 {
   font-size: 3.2rem;
   font-weight: 300;
 }
 
-h2 {
+.hero-2 {
   font-size: 2.4rem;
   font-weight: 500;
 }
@@ -83,4 +84,10 @@ for $i in 1...21 {
 
 .text-right {
   text-align: right;
+}
+
+for $i in 1...21 {
+  .shadow-{$i} {
+    box-shadow: 0 2px (1 * $i)px -1px rgba(0, 0, 0, 0.2), 0 (1 * $i)px (1 * $i)px 0 rgba(0, 0, 0, 0.14), 0 1px (2 * $i)px 0 rgba(0, 0, 0, 0.12);
+  }
 }

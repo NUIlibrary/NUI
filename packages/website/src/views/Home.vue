@@ -1,9 +1,9 @@
 <template>
   <div class="home text-center">
-    <div class="hero mt-10 mb-20">
+    <div class="hero mt-10 mb-15">
       <img src="@/assets/logo.png" alt="logo" width="150" />
-      <h1>NUI</h1>
-      <h2>一个 Vue.js 3.0 UI 库</h2>
+      <h1 class="hero-1">NUI</h1>
+      <h2 class="hero-2 mb-5">一个 Vue.js 3.0 UI 库</h2>
       <n-button
         color="primary"
         @click="$router.push({ name: 'DocsDownload&Use' })"
@@ -13,6 +13,7 @@
         color="primary"
         plain
         href="https://github.com/NUIlibrary/awesome-nui"
+        target="_blank"
       >
         <n-icon>github-fill</n-icon>
         Awesome NUI
@@ -55,5 +56,20 @@
         </n-card>
       </n-col>
     </n-row>
+    <n-card class="text-left my-10">
+      <n-card-title>灵感来源</n-card-title>
+      <n-card-text>
+        我们希望有这么一套 UI 组件库<br/><br/>
+        1. 它拥有简单、符合直观逻辑的语法；<br/>
+        2. 在保持语法不变的情况下，在不同的、甚至同一个项目里有着完全不同的面貌；<br/>
+        3. 它是面向未来的，以期有着较长的生命周期和活力；<br/><br/>
+        满足以上几点需求的 UI 组件库，将极大的节省开发者的开发成本，全心投入到核心业务逻辑。<br/><br/>
+        起初，NUI 把目前投向了 Less 预处理器，Less 允许代码在客户端编译。
+        但因此去引入一个庞大的（用户甚至都不需要的）文件显然是不优雅的，因此 NUI 自行封装了符合自身需求的方法类。
+        开发者在实例化 NUI 类时传入配置参数，或者在生产环境调用对应的函数，即可有着完成不同的样式面貌。<br/><br/>
+        为了拥有较长的生命周期和活力，NUI 优先为 Vue 3.0 适配。Vue 3.0 尚在 Preview 版本，在可预计的未来，将有较长时间的支持和广泛的开发者。<br/><br/>
+        也是因优先 Vue 的原因，NUI 预置的主题配色跟随于 Vue 官方。
+      </n-card-text>
+    </n-card>
   </div>
 </template>
