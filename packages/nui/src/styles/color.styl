@@ -1,14 +1,13 @@
+// :root {
+//   for $key, $value in $NUI.color {
+//     --nui-color-{$key}: $value;
 
-:root {
-  for $key, $value in $NUI.color {
-    --nui-color-{$key}: $value;
-
-    for $i in 1...6 {
-      --nui-color-{$key}-lighten{$i}: lighten($value, $i * 10%);
-      --nui-color-{$key}-darken{$i}: darken($value, $i * 10%);
-    }
-  }
-}
+//     for $i in 1...6 {
+//       --nui-color-{$key}-lighten{$i}: lighten($value, $i * 10%);
+//       --nui-color-{$key}-darken{$i}: darken($value, $i * 10%);
+//     }
+//   }
+// }
 
 // 判断字体颜色
 chioseTextColor(bgColor) {

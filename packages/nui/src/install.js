@@ -5,9 +5,9 @@ function install(app) {
     app.use(components[key]);
   });
   app.config.globalProperties.$nui = {
-    useTheme:(themeName) =>{
+    useTheme:(themeName) => {
       this.options.defaultTheme = themeName;
-      this.setCSSCustomProperties(this.options)
+      this.setCSSCustomProperties.setColors(this.options.themes[themeName])
     }
   };
 }

@@ -11,11 +11,11 @@
 import Header from '@/components/Header.vue';
 export default {
   components: { Header },
-  created() {
-    setTimeout(() => {
-      this.$nui.useTheme('happy');
-    }, 1000);
-  },
+  // created() {
+  //   setTimeout(() => {
+  //     this.$nui.useTheme('dark');
+  //   }, 5000);
+  // },
 };
 </script>
 

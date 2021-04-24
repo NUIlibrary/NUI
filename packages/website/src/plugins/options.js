@@ -1,5 +1,5 @@
 const options = {
-  autoTheme: ['light', 'dark'], // true/false/Array
+  isFollowSystemTheme: ['light', 'dark'], // true/false/Array
   colors: {
     // ...
     customColor: '#121212',
