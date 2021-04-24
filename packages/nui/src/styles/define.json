@@ -13,12 +13,7 @@
     "magenta": "#FF3DFF",
     "pink": "#FF3D9E",
     "white": "#DDDDDD",
-    "black": "#333333",
-    "primary":"#4fc08d",
-    "gray":"#f6f6f6",
-    "dark":"#4f5959",
-    "text-dark":"#2c3e50",
-    "text-light":"#ffffff"
+    "black": "#333333"
   },
   "break": {
     "xs": {
@@ -42,18 +37,33 @@
       "value": "1920px"
     }
   },
+  "defaultTheme":"light",
   "themes": {
     "light": {
-      "primary": "sky",
-      "secondary": "cyan",
-      "accent": "blue",
-      "error": "red",
-      "info": "",
-      "success": "spring",
-      "warning": "orange",
-      "text-light": "",
-      "text-dark": "",
-      "bg": ""
+      "primary": "#42b983",
+      "success": "#42b983",
+      "warning": "#e7c000",
+      "danger": "#cc0000",
+      "bg":"#ffffff",
+      "text":"#2c3e50",
+      "bg-light":"#ffffff",
+      "bg-middle":"#f6f6f6",
+      "bg-dark":"#475050",
+      "text-light":"#ffffff",
+      "text-dark":"#2c3e50"
+    },
+    "dark": {
+      "primary": "#42b983",
+      "success": "#42b983",
+      "warning": "#e7c000",
+      "danger": "#cc0000",
+      "bg":"#121212",
+      "text":"#ffffff",
+      "bg-light":"#ffffff",
+      "bg-middle":"#f6f6f6",
+      "bg-dark":"#475050",
+      "text-light":"#ffffff",
+      "text-dark":"#2c3e50"
     }
   }
 }
