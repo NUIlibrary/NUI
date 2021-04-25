@@ -5,7 +5,7 @@ export default {
   props: {
     color: {
       type: String,
-      default: 'white-lighten1',
+      default: 'info',
     },
     plain: {
       type: Boolean,

@@ -32,6 +32,11 @@
         npm
       </n-link>
     </n-col>
+    <n-col :span="6">
+      <n-button @click="changeDefaultTheme('dark')">深色</n-button>
+      <n-button @click="changeDefaultTheme(['light', 'dark'])">自动</n-button>
+      <n-button @click="changeDefaultTheme('light')">浅色</n-button>
+    </n-col>
   </n-row>
 </template>
 
@@ -42,6 +47,14 @@ export default {
       localStorage.NUI_LANGUAGE = lang;
       location.reload();
     },
+    changeDefaultTheme(defaultTheme) {
+      localStorage.setItem('NUI_DEFAULT_THEME', JSON.stringify(defaultTheme));
+      this.$nui.setOptions({ defaultTheme });
+    },
+  },
+  created() {
+    const defaultTheme = localStorage.getItem('NUI_DEFAULT_THEME');
+    this.changeDefaultTheme(JSON.parse(defaultTheme));
   },
 };
 </script>

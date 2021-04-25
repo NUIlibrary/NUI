@@ -10,12 +10,7 @@
 <script>
 import Header from '@/components/Header.vue';
 export default {
-  components: { Header },
-  // created() {
-  //   setTimeout(() => {
-  //     this.$nui.useTheme('dark');
-  //   }, 5000);
-  // },
+  components: { Header }
 };
 </script>
 

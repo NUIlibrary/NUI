@@ -5,11 +5,15 @@
  */
 const mergeObject = (preObject, customObject) => {
   for (const key in customObject) {
-    if (!preObject[key]) preObject[key] = {};
-    if (typeof customObject[key] === 'object') {
-      mergeObject(preObject[key], customObject[key]);
-    } else {
+    if (typeof preObject[key] !== typeof customObject[key]) {
       preObject[key] = customObject[key];
+    } else {
+      if (!preObject[key]) preObject[key] = {};
+      if (typeof customObject[key] === 'object') {
+        mergeObject(preObject[key], customObject[key]);
+      } else {
+        preObject[key] = customObject[key];
+      }
     }
   }
 };

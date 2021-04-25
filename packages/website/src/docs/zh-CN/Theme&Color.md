@@ -131,12 +131,11 @@ NUI 为开发者在开发环境与生产环境中，提供以下能力。用户�
 
 ### 在生产环境中
 
-使用对应的`$nui.api`。
+<n-link color="primary" v-on:click="$router.push({name:'changeOptions'})">尝试修改配置</n-link>
 
-1. 新增主题（若新增主题与已存在的主题重名，将覆盖）
-2. 修改主题/主题颜色
-3. 新增基本颜色
-4. 修改基本颜色
+$nui.getOptions()
+
+$nui.setOptions()
 
 ## 使用
 
