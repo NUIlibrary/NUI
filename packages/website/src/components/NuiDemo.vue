@@ -12,7 +12,7 @@
       </div>
     </div>
     <div class="nui-demo-button" @click="isOpen = !isOpen">
-      {{ isOpen ? "关闭" : "展开" }}
+      {{ isOpen ? '关闭' : '展开' }}
     </div>
   </div>
 </template>
@@ -29,7 +29,7 @@ export default {
 
 <style lang="stylus" scoped>
 .nui-demo {
-  background-color: #eeeeee;
+  background-color: var(--nui-color-bg-middle)
 
   .nui-demo-block {
     overflow: hidden;
@@ -44,13 +44,13 @@ export default {
     }
 
     .nui-demo-des {
-      color: #999999;
+      color: var(--nui-color-text)
     }
   }
 
   .nui-demo-button {
-    color: #ffffff;
-    background-color: #909090;
+    color: var(--nui-color-text-light)
+    background-color: var(--nui-color-bg-dark)
     text-align: center;
   }
 }

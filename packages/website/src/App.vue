@@ -28,27 +28,27 @@ pre {
 }
 
 .badge {
-  border-color: #42b983;
-  background-color: #f8f8f8;
+  border-color: var(--nui-color-primary);
+  background-color: var(--nui-color-bg-middle);
   padding: 0.1rem 1.5rem;
   border-left-width: 0.5rem;
   border-left-style: solid;
   margin: 1rem 0;
 
   &.badge-title {
-    border-color: #42b983;
+    border-color: var(--nui-color-primary);
   }
 
   &.badge-other {
-    border-color: #909090;
+    border-color: var(--nui-color-primary);
   }
 
   &.badge-warn {
-    border-color: #fff111;
+    border-color: var(--nui-color-warning);
   }
 
   &.badge-danger {
-    border-color: #ff1111;
+    border-color: var(--nui-color-danger);
   }
 
   .badge-title {

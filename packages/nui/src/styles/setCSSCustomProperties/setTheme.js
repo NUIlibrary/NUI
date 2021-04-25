@@ -11,7 +11,6 @@ const setTheme = (themes, defaultTheme, id) => {
     )}}}@media (prefers-color-scheme: dark){:root{${returnCSSContentByColors(
       darkTheme
     )}}}`;
-    console.log(styleContent);
     appendStyleElement(styleContent, id || null);
   } else {
     // 仅使用默认主题，不使用媒体查询主题偏爱

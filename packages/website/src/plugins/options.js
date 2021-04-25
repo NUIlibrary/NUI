@@ -1,5 +1,5 @@
 const options = {
-  isFollowSystemTheme: ['light', 'dark'], // true/false/Array
+  defaultTheme: ['light', 'dark'], 
   colors: {
     // ...
     customColor: '#121212',

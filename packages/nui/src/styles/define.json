@@ -1,6 +1,6 @@
 {
   "defaultTheme": ["light", "dark"],
-  "color": {
+  "colors": {
     "red": "#FF3D3D",
     "orange": "#FF9E3D",
     "yellow": "#FFFF3D",

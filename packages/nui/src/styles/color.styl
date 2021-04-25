@@ -1,62 +1,59 @@
-// :root {
-//   for $key, $value in $NUI.color {
-//     --nui-color-{$key}: $value;
-
-//     for $i in 1...6 {
-//       --nui-color-{$key}-lighten{$i}: lighten($value, $i * 10%);
-//       --nui-color-{$key}-darken{$i}: darken($value, $i * 10%);
-//     }
-//   }
-// }
+$lightenStep = 15%;
+$darkenStep = 15%;
 
 // 判断字体颜色
 chioseTextColor(bgColor) {
-  if (luminosity(bgColor) > 0.5) {
+  if (luminosity(bgColor) > 0.4) {
     color: var(--nui-color-text-dark);
   } else {
     color: var(--nui-color-text-light);
   }
 }
 
-for $key, $value in $NUI.color {
-  .bg-{$key} {
-    background-color: s('var(--nui-color-' + $key + ')');
-    chioseTextColor($value);
-  }
-
-  .border-{$key} {
-    border: 1px solid s('var(--nui-color-' + $key + ')');
-  }
-
-  .text-{$key} {
-    color: s('var(--nui-color-' + $key + ')');
-  }
-
-  for $i in 1...6 {
-    .bg-{$key}-lighten{$i} {
-      background-color: s('var(--nui-color-' + $key + '-lighten' + $i + ')');
-      chioseTextColor(lighten($value, $i * 10%));
+fun(colors) {
+  for $key, $value in colors {
+    .bg-{$key} {
+      background-color: s('var(--nui-color-' + $key + ')');
+      chioseTextColor($value);
     }
 
-    .bg-{$key}-darken{$i} {
-      background-color: s('var(--nui-color-' + $key + '-darken' + $i + ')');
-      chioseTextColor(darken($value, $i * 10%));
+    .border-{$key} {
+      border: 1px solid s('var(--nui-color-' + $key + ')');
     }
 
-    .text-{$key}-lighten{$i} {
-      color: s('var(--nui-color-' + $key + '-lighten' + $i + ')');
+    .text-{$key} {
+      color: s('var(--nui-color-' + $key + ')');
     }
 
-    .text-{$key}-darken{$i} {
-      color: s('var(--nui-color-' + $key + '-darken' + $i + ')');
-    }
+    for $i in 1...6 {
+      .bg-{$key}-lighten{$i} {
+        background-color: s('var(--nui-color-' + $key + '-lighten' + $i + ')');
+        chioseTextColor(lighten($value, $i * $lightenStep));
+      }
 
-    .border-{$key}-lighten{$i} {
-      border: 1px solid s('var(--nui-color-' + $key + '-darken' + $i + ')');
-    }
+      .bg-{$key}-darken{$i} {
+        background-color: s('var(--nui-color-' + $key + '-darken' + $i + ')');
+        chioseTextColor(darken($value, $i * $darkenStep));
+      }
 
-    .border-{$key}-darken{$i} {
-      border: 1px solid s('var(--nui-color-' + $key + '-darken' + $i + ')');
+      .text-{$key}-lighten{$i} {
+        color: s('var(--nui-color-' + $key + '-lighten' + $i + ')');
+      }
+
+      .text-{$key}-darken{$i} {
+        color: s('var(--nui-color-' + $key + '-darken' + $i + ')');
+      }
+
+      .border-{$key}-lighten{$i} {
+        border: 1px solid s('var(--nui-color-' + $key + '-darken' + $i + ')');
+      }
+
+      .border-{$key}-darken{$i} {
+        border: 1px solid s('var(--nui-color-' + $key + '-darken' + $i + ')');
+      }
     }
   }
 }
+
+fun($NUI.colors);
+fun($NUI.themes.light);
