@@ -6,7 +6,7 @@ import NUI from '../../../nui/src/index';
 //   defaultTheme: ['happy', 'light'],
 //   themes: {
 //     happy: {
-//       bg: '#ff8b8b',
+//       bg: '#898989',
 //     },
 //   },
 // });

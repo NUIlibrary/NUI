@@ -1,6 +1,6 @@
 <template>
   <n-row
-    class="header shadow-3 px-5 pt-1 mb-5"
+    class="header px-5 pt-1 mb-5"
     justify="space-evenly"
     align="center"
   >
@@ -54,7 +54,7 @@ export default {
   },
   created() {
     const defaultTheme = localStorage.getItem('NUI_DEFAULT_THEME');
-    this.changeDefaultTheme(JSON.parse(defaultTheme));
+    defaultTheme && this.changeDefaultTheme(JSON.parse(defaultTheme));
   },
 };
 </script>
