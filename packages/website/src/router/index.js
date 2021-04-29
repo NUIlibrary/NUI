@@ -6,9 +6,6 @@ import NotFound from '../views/NotFound/NotFound.vue';
 import DocNotFound from '../views/NotFound/DocNotFound.vue';
 import Docs from '../views/Docs.vue';
 
-let userLanguage =
-  localStorage.getItem('NUI_LANGUAGE') || window.navigator.language || 'zh-CN';
-
 const languageList = ['zh-CN', 'en-US'];
 
 const routes = [
@@ -23,14 +20,11 @@ const routes = [
     component: Test,
   },
   {
-    // Docs 重定向
-    // 当 docs 路径前不指定语言时，将重定向到本地语言 docs 路径
+    // Docs 重定向，与路由前置守卫配合，
+    // 当 docs 路径前不指定语言时，将重定向到本地语言 docs 路径。
     // eg. '/docs/button' -> '/zh-CN/docs/button'
     path: '/docs',
-    name: 'Docs',
-    redirect: {
-      name: `${userLanguage}/Docs`,
-    }
+    name: 'Docs'
   },
   {
     path: '/:pathMatch(.*)*',
@@ -61,6 +55,18 @@ languageList.forEach((language) => {
 const router = createRouter({
   history: createWebHashHistory(process.env.BASE_URL),
   routes,
+});
+
+router.beforeEach((to, from, next) => {
+  if (to.name === 'Docs') {
+    const userLanguage =
+      localStorage.getItem('NUI_LANGUAGE') ||
+      window.navigator.language ||
+      'zh-CN';
+    next({ name: `${userLanguage}/Docs` });
+  } else {
+    next();
+  }
 });
 
 export default router;

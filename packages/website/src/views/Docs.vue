@@ -1,6 +1,6 @@
 <template>
   <n-row :gutter="20">
-    <n-col :sm="3" :md="3">
+    <n-col :span="3" :sm="3" :md="3">
       <div v-for="(groupItem, groupkey) in navList" :key="groupkey">
         <h3>{{ groupkey }}</h3>
         <p v-for="(listItem, listKey) in groupItem" :key="listKey">
@@ -8,11 +8,8 @@
         </p>
       </div>
     </n-col>
-    <n-col :xs="20" :sm="17" :md="14">
+    <n-col :span="17" :sm="17" :md="14">
       <router-view />
-    </n-col>
-    <n-col :sm="3" :md="3">
-      <n-example></n-example>
     </n-col>
   </n-row>
 </template>
