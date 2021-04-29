@@ -28,7 +28,9 @@ const routes = [
     // eg. '/docs/button' -> '/zh-CN/docs/button'
     path: '/docs',
     name: 'Docs',
-    redirect: `/${userLanguage}/docs`,
+    redirect: {
+      name: `${userLanguage}/Docs`,
+    }
   },
   {
     path: '/:pathMatch(.*)*',
@@ -55,7 +57,6 @@ languageList.forEach((language) => {
     ],
   });
 });
-
 
 const router = createRouter({
   history: createWebHashHistory(process.env.BASE_URL),

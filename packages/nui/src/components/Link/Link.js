@@ -21,7 +21,7 @@ export default {
       {
         class: [
           'n-link',
-          this.$props.color?`text-${this.$props.color}`:'color-initial',
+          this.$props.color?`text-${this.$props.color}`:null,
           {
             'no-underline': !this.$props.underline || this.$props.disabled,
             disabled: this.$props.disabled,
