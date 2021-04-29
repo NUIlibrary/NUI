@@ -1,111 +1,14 @@
 $NUI = json('./define.json', { hash: true });
 
-@import 'reset.styl';
-@import 'layout.styl';
-@import 'color.styl';
+@import './common/reset.styl';
+// @import './common/color.styl';
+@import './common/style.styl';
 
-html {
-  font-family: Inter, Roboto, Oxygen, Fira Sans, Helvetica Neue, sans-serif;
-  background-color: var(--nui-color-bg);
-  color: var(--nui-color-text);
-  font-size: 16px;
-}
 
-.hero-1 {
-  font-size: 3.2rem;
-  font-weight: 300;
-}
-
-.hero-2 {
-  font-size: 2.4rem;
-  font-weight: 500;
-}
-
-ol, p, ul {
-  line-height: 1.7;
-}
-
-ol, ul {
-  padding-left: 1.2rem;
-}
-
-p {
-  word-spacing: 0.05rem;
-  display: block;
-  margin-block-start: 1rem;
-  margin-block-end: 1rem;
-  margin-inline-start: 0;
-  margin-inline-end: 0;
-}
-
-for $i in 1...21 {
-  .mt-{$i} {
-    margin-top: ($i * 4) px;
-  }
-
-  .mb-{$i} {
-    margin-bottom: ($i * 4) px;
-  }
-
-  .ml-{$i} {
-    margin-left: ($i * 4) px;
-  }
-
-  .mr-{$i} {
-    margin-right: ($i * 4) px;
-  }
-
-  .my-{$i} {
-    margin-top: ($i * 4) px;
-    margin-bottom: ($i * 4) px;
-  }
-
-  .mx-{$i} {
-    margin-left: ($i * 4) px;
-    margin-right: ($i * 4) px;
-  }
-
-  .pt-{$i} {
-    padding-top: ($i * 4) px;
-  }
-
-  .pb-{$i} {
-    padding-bottom: ($i * 4) px;
-  }
-
-  .pl-{$i} {
-    padding-left: ($i * 4) px;
-  }
-
-  .pr-{$i} {
-    padding-right: ($i * 4) px;
-  }
-
-  .py-{$i} {
-    padding-top: ($i * 4) px;
-    padding-bottom: ($i * 4) px;
-  }
-
-  .px-{$i} {
-    padding-left: ($i * 4) px;
-    padding-right: ($i * 4) px;
-  }
-}
-
-.text-center {
-  text-align: center;
-}
-
-.text-left {
-  text-align: left;
-}
-
-.text-right {
-  text-align: right;
-}
-
-for $i in 1...21 {
-  .shadow-{$i} {
-    box-shadow: 0 2px (1 * $i)px -1px rgba(0, 0, 0, 0.2), 0 (1 * $i)px (1 * $i)px 0 rgba(0, 0, 0, 0.14), 0 1px (2 * $i)px 0 rgba(0, 0, 0, 0.12);
-  }
-}
+@import './components/App.styl';
+@import './components/Button.styl';
+@import './components/Card.styl';
+@import './components/Grid.styl';
+@import './components/Icon.styl';
+@import './components/Link.styl';
+@import './components/Menu.styl';

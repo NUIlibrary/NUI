@@ -1,9 +1,13 @@
 <template>
   <div>
-    <Header />
-    <n-container>
-      <router-view />
-    </n-container>
+    <n-app-bar>
+      <Header />
+    </n-app-bar>
+    <n-app-main>
+      <n-container>
+        <router-view />
+      </n-container>
+    </n-app-main>
   </div>
 </template>
 
@@ -24,7 +28,7 @@ pre {
 
 .badge {
   border-color: var(--nui-color-primary);
-  background-color: var(--nui-color-bg-middle);
+  background-color: var(--nui-color-bg-darken1);
   padding: 0.1rem 1.5rem;
   border-left-width: 0.5rem;
   border-left-style: solid;

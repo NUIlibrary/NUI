@@ -17,13 +17,13 @@ export default {
   },
   render() {
     return h(
-      'a',
+      this.$props.disabled?'span':'a',
       {
         class: [
           'n-link',
           this.$props.color?`text-${this.$props.color}`:'color-initial',
           {
-            'no-underline': !this.$props.underline,
+            'no-underline': !this.$props.underline || this.$props.disabled,
             disabled: this.$props.disabled,
           },
         ],

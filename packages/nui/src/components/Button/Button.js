@@ -11,9 +11,17 @@ export default {
       type: Boolean,
       default: false,
     },
+    round: {
+      type: Boolean,
+      default: false,
+    },
     disabled: {
       type: Boolean,
       default: false,
+    },
+    size: {
+      type: String,
+      default: 'md'
     },
     href: {
       type: String,
@@ -29,10 +37,11 @@ export default {
         class: [
           'n-button',
           `border-${this.$props.color}`,
+          this.$props.size,
           this.$props.plain
             ? `text-${this.$props.color}`
             : `bg-${this.$props.color}`,
-          { disabled: this.$props.disabled },
+          { disabled: this.$props.disabled, round: this.$props.round },
         ],
         href: this.$props.href ? this.$props.href : null,
         target: this.$props.target ? this.$props.target : null,

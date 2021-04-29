@@ -1,4 +1,8 @@
-import { appendStyleElement, returnCSSContentByColors } from './utils';
+import {
+  appendStyleElement,
+  returnCSSContentByColors,
+  returnCSSBgContentByColors,
+} from './utils';
 import setColors from './setColors';
 
 const setTheme = (themes, defaultTheme, id) => {
@@ -8,9 +12,11 @@ const setTheme = (themes, defaultTheme, id) => {
     // 使用媒体查询主题偏好
     const styleContent = `@media (prefers-color-scheme: light){:root{${returnCSSContentByColors(
       lightTheme
-    )}}}@media (prefers-color-scheme: dark){:root{${returnCSSContentByColors(
+    )}}${returnCSSBgContentByColors(
+      lightTheme
+    )}}@media (prefers-color-scheme: dark){:root{${returnCSSContentByColors(
       darkTheme
-    )}}}`;
+    )}}${returnCSSBgContentByColors(darkTheme)}}`;
     appendStyleElement(styleContent, id || null);
   } else {
     // 仅使用默认主题，不使用媒体查询主题偏爱

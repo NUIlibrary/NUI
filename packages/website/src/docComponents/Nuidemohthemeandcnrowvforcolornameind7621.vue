@@ -20,6 +20,13 @@
     data() {
       return {
         colorNameSet: [
+          'primary',
+          'success',
+          'warning',
+          'danger',
+          'info',
+          'text',
+          'bg',
           'red',
           'orange',
           'yellow',

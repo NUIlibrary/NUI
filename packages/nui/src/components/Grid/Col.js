@@ -1,31 +1,36 @@
-import { h } from 'vue'
+import { h } from 'vue';
 
 export default {
   name: 'NCol',
   props: {
     tab: {
       type: String,
-      default: 'div'
+      default: 'div',
     },
     span: {
       type: Number,
-      default: 20
+      default: 20,
     },
     xs: {
-      type: Number
+      type: Number,
+      default: -1,
     },
     sm: {
-      type: Number
+      type: Number,
+      default: -1,
     },
     md: {
-      type: Number
+      type: Number,
+      default: -1,
     },
-    ls: {
-      type: Number
+    lg: {
+      type: Number,
+      default: -1,
     },
     xl: {
-      type: Number
-    }
+      type: Number,
+      default: -1,
+    },
   },
 
   computed: {
@@ -35,20 +40,25 @@ export default {
         parent = parent.$parent;
       }
       return parent ? parent.gutter : 0;
-    }
+    },
   },
 
   render() {
-    return h(this.$props.tab, {
-      class: ['n-col',
-        `span-${this.$props.span}`,
-        this.$props.xs ? `xs-${this.$props.xs}` : '',
-        this.$props.sm ? `sm-${this.$props.sm}` : '',
-        this.$props.md ? `md-${this.$props.md}` : '',
-        this.$props.lg ? `ls-${this.$props.lg}` : '',
-        this.$props.xl ? `xl-${this.$props.xl}` : '',
-      ],
-      style: this.gutter ? `padding:0 ${this.gutter / 2}px` : ''
-    }, this.$slots.default?.());
-  }
-}
+    return h(
+      this.$props.tab,
+      {
+        class: [
+          'n-col',
+          `span-${this.$props.span}`,
+          this.$props.xs !== -1 ? `xs-${this.$props.xs}` : '',
+          this.$props.sm !== -1 ? `sm-${this.$props.sm}` : '',
+          this.$props.md !== -1 ? `md-${this.$props.md}` : '',
+          this.$props.lg !== -1 ? `ls-${this.$props.lg}` : '',
+          this.$props.xl !== -1 ? `xl-${this.$props.xl}` : '',
+        ],
+        style: this.gutter ? `padding:0 ${this.gutter / 2}px` : '',
+      },
+      this.$slots.default?.()
+    );
+  },
+};

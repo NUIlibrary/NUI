@@ -1,15 +1,32 @@
 .n-button {
   display: inline-block;
   outline: 0;
-  padding: 0.5rem 1.5rem;
-  border-radius: 9999px;
   letter-spacing: 0.05rem;
   text-transform: uppercase;
   place-items: center center;
   white-space: nowrap;
   font-weight: 700;
-  margin: 0.1rem 0.5rem;
   text-decoration: none;
+  @extend .round-1;
+  @extend .ma-1
+
+  &.sm {
+    padding: 0.2rem 0.6rem;
+    font-size: 0.875rem;
+    line-height: 1.3rem;
+  }
+
+  &.md {
+    padding: 0.4rem 1rem;
+    font-size: 0.875rem;
+    line-height: 1.3rem;
+  }
+
+  &.lg {
+    font-size: 1rem;
+    padding: 0.5rem 1.5rem;
+    line-height: 1.5rem;
+  }
 
   &:hover {
     cursor: pointer;

@@ -7,12 +7,25 @@ export default {
       type: Boolean,
       default: false,
     },
+    color: {
+      type: String,
+      default: 'fg',
+    },
+    flat: {
+      type: Boolean,
+      default: false,
+    }
   },
   render() {
     return h(
       'div',
       {
-        class: ['n-card', { hover: this.$props.hover }],
+        class: [
+          'n-card',
+          this.$props.flat ? null : 'shadow-2',
+          { hover: this.$props.hover },
+          `bg-${this.$props.color}`,
+        ],
       },
       this.$slots.default?.()
     );

@@ -1,5 +1,5 @@
 import Button from './Button';
-import './index.styl';
+
 
 export { Button };
 export default Button;

@@ -1,10 +1,9 @@
 <template><n-card>
   <n-card-title>Title</n-card-title>
+  <n-card-subtitle>Subtitle</n-card-subtitle>
   <n-card-text>Content</n-card-text>
   <n-card-action>
-    <n-button>Submit</n-button>
+    <n-button color="primary">Submit</n-button>
     <n-button>Cancel</n-button>
   </n-card-action>
-</n-card>
-
-<n-card>Content</n-card></template>
+</n-card></template>

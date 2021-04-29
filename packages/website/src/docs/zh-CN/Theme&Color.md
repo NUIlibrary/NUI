@@ -105,7 +105,7 @@ NUI 为开发者在开发环境与生产环境中，提供以下能力。用户�
       "bg": "#ffffff",
       "text": "#2c3e50",
       "bg-light": "#ffffff",
-      "bg-middle": "#f6f6f6",
+      "fg": "#f6f6f6",
       "bg-dark": "#475050",
       "text-light": "#ffffff",
       "text-dark": "#2c3e50"
@@ -118,7 +118,7 @@ NUI 为开发者在开发环境与生产环境中，提供以下能力。用户�
       "bg": "#121212",
       "text": "#ffffff",
       "bg-light": "#ffffff",
-      "bg-middle": "#f6f6f6",
+      "fg": "#f6f6f6",
       "bg-dark": "#475050",
       "text-light": "#ffffff",
       "text-dark": "#2c3e50"
@@ -173,6 +173,13 @@ $nui.setOptions()
     data() {
       return {
         colorNameSet: [
+          'primary',
+          'success',
+          'warning',
+          'danger',
+          'info',
+          'text',
+          'bg',
           'red',
           'orange',
           'yellow',

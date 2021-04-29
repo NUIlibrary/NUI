@@ -1,9 +1,5 @@
 <template>
-  <n-row
-    class="header px-5 pt-1 mb-5"
-    justify="space-evenly"
-    align="center"
-  >
+  <n-row class="header" justify="space-evenly" align="center">
     <n-col :span="5" @click="$router.push({ name: 'Home' })">
       <img src="@/assets/logo.png" class="logo" />
       <span class="hero-2">UI</span>
@@ -34,8 +30,8 @@
     </n-col>
     <n-col :span="6">
       <n-button @click="changeDefaultTheme('dark')">深色</n-button>
-      <n-button @click="changeDefaultTheme(['light', 'dark'])">自动</n-button>
-      <n-button @click="changeDefaultTheme('light')">浅色</n-button>
+      <n-button @click="changeDefaultTheme(['nenu', 'dark'])">自动</n-button>
+      <n-button @click="changeDefaultTheme('nenu')">浅色</n-button>
     </n-col>
   </n-row>
 </template>
@@ -43,9 +39,9 @@
 <script>
 export default {
   methods: {
-    setLanguage(lang) {
-      localStorage.NUI_LANGUAGE = lang;
-      location.reload();
+    setLanguage(language) {
+      localStorage.NUI_LANGUAGE = language;
+      this.$router.push({ name: `${language}/Docs` });
     },
     changeDefaultTheme(defaultTheme) {
       localStorage.setItem('NUI_DEFAULT_THEME', JSON.stringify(defaultTheme));

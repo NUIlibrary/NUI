@@ -1,4 +1,8 @@
-import { appendStyleElement, returnCSSContentByColors } from './utils';
+import {
+  appendStyleElement,
+  returnCSSContentByColors,
+  returnCSSBgContentByColors,
+} from './utils';
 
 /**
  *
@@ -6,7 +10,7 @@ import { appendStyleElement, returnCSSContentByColors } from './utils';
  * @param {String} id
  */
 const setColors = (colors, id) => {
-  const styleContent = `:root{${returnCSSContentByColors(colors)}}`;
+  const styleContent = `:root{${returnCSSContentByColors(colors)}}${returnCSSBgContentByColors(colors)}`;
   appendStyleElement(styleContent, id || null);
 };
 

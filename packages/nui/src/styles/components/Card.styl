@@ -1,0 +1,44 @@
+
+.n-card {
+  transition: all 0.5s ease-in-out;
+  @extend .round-1
+
+  &.hover:hover {
+    @extend .shadow-15
+  }
+
+  .n-card-title {
+    padding: 1rem;
+    font-size: 1.65rem;
+    padding-bottom: 0.3rem;
+    font-weight: 400;
+
+    &+.n-card-subtitle {
+      padding-top: 0;
+    }
+
+    &+.n-card-text {
+      padding-top: 0;
+    }
+  }
+
+  .n-card-subtitle {
+    padding: 1rem;
+
+    &+.n-card-text {
+      padding-top: 0;
+    }
+  }
+
+  .n-card-text {
+    padding: 1rem;
+  }
+
+  .n-card-action {
+    padding: 1rem;
+  }
+
+  .n-card-action {
+    padding: 0.5rem;
+  }
+}

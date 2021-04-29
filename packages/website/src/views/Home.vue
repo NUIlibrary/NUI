@@ -6,11 +6,13 @@
       <h2 class="hero-2 mb-5">一个 Vue.js 3.0 UI 库</h2>
       <n-button
         color="primary"
-        @click="$router.push({ name: 'DocsDownload&Use' })"
+        size="lg"
+        @click="$router.push({ name: 'Docs' })"
         >快速上手</n-button
       >
       <n-button
         color="primary"
+        size="lg"
         plain
         href="https://github.com/NUIlibrary/awesome-nui"
         target="_blank"
@@ -21,7 +23,7 @@
     </div>
     <n-row :gutter="10">
       <n-col :md="5" :sm="10" :ms="20">
-        <n-card>
+        <n-card flat>
           <n-card-title class="text-primary">语义化</n-card-title>
           <n-card-text>
             NUI 组件库致力于书写有语义化的属性名、类名，例如 disabled
@@ -30,7 +32,7 @@
         </n-card>
       </n-col>
       <n-col :md="5" :sm="10" :ms="20">
-        <n-card>
+        <n-card flat>
           <n-card-title class="text-primary">noCSS</n-card-title>
           <n-card-text>
             开发者无需书写 CSS 代码，需要的样式均由 NUI
@@ -39,7 +41,7 @@
         </n-card>
       </n-col>
       <n-col :md="5" :sm="10" :ms="20">
-        <n-card>
+        <n-card flat>
           <n-card-title class="text-primary">高可定制</n-card-title>
           <n-card-text>
             无论是主题，还是颜色，甚至是断点，开发者都可以二次定制。如果愿意，甚至用户也可以在生产环境中拥有一套自己的
@@ -48,7 +50,7 @@
         </n-card>
       </n-col>
       <n-col :md="5" :sm="10" :ms="20">
-        <n-card>
+        <n-card flat>
           <n-card-title class="text-primary">高响应式</n-card-title>
           <n-card-text>
             不仅仅是屏幕尺寸，NUI 提供的响应式包括系统主题、颜色等响应式。
@@ -58,7 +60,7 @@
     </n-row>
     <n-row justify="center">
       <n-col :span="12" :xs="20" :md="12">
-        <n-card class=" my-20" hover>
+        <n-card class=" my-20" flat>
           <n-card-title>灵感来源</n-card-title>
           <n-card-text class="text-left">
             我们希望有这么一套 UI 组件库<br /><br />

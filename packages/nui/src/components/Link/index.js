@@ -1,5 +1,5 @@
 import Link from './Link';
-import './index.styl'
+
 
 export { Link };
 export default Link;

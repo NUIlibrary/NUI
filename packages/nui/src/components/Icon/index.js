@@ -1,5 +1,5 @@
 import Icon from './Icon';
-import './index.styl'
+
 import './iconfont.js'
 
 export { Icon };

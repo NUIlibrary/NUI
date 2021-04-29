@@ -1,9 +1,9 @@
 <template>
-  <div class="nui-demo">
+  <div class="nui-demo shadow-5 pa-2 my-2">
     <div class="nui-demo-show">
       <slot name="show"></slot>
     </div>
-    <div :class="`nui-demo-block ${isOpen ? 'open' : 'close'}`">
+    <div :class="`nui-demo-block my-1 ${isOpen ? 'open' : 'close'}`">
       <div class="nui-demo-des">
         <slot name="des"></slot>
       </div>
@@ -29,7 +29,7 @@ export default {
 
 <style lang="stylus" scoped>
 .nui-demo {
-  background-color: var(--nui-color-bg-middle)
+  background-color: var(--nui-color-fg)
 
   .nui-demo-block {
     overflow: hidden;
@@ -42,15 +42,11 @@ export default {
     &.close {
       max-height: 0;
     }
-
-    .nui-demo-des {
-      color: var(--nui-color-text)
-    }
   }
 
   .nui-demo-button {
     color: var(--nui-color-text-light)
-    background-color: var(--nui-color-bg-dark)
+    background-color: var(--nui-color-black)
     text-align: center;
   }
 }

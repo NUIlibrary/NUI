@@ -2,24 +2,17 @@
   <div class="test">
     <h1>This is a test page</h1>
     <n-example></n-example>
-    <n-row justify="center" align="center" :gutter="10">
-      <n-col class="my-col bg-red" v-for="(item, index) in 10" :key="index" :span="20"></n-col>
-    </n-row>
+    <n-card>
+      <n-card-title>Title 标题文本色</n-card-title>
+      <n-card-subtitle>Subtitle 副标题文本色</n-card-subtitle>
+      <n-card-text>Text 正文文本色</n-card-text>
+      <n-card-action>
+        <n-button color="primary">Primary</n-button>
+        <n-button color="success">success</n-button>
+        <n-button color="warning">warning</n-button>
+        <n-button color="danger">danger</n-button>
+        <n-button color="info">default / info</n-button>
+      </n-card-action>
+    </n-card>
   </div>
 </template>
-
-<style lang="stylus" scoped>
-.my-col {
-  height: 3rem;
-  // width: auto;
-  // background-color: #121212;
-
-  // &:nth-child(odd) {
-  //   background-color: #ababab;
-  // }
-
-  // &:nth-child(4) {
-  //   height: 3rem;
-  // }
-}
-</style>

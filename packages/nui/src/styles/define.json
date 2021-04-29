@@ -40,32 +40,25 @@
   },
   "themes": {
     "light": {
-      "primary": "#42b983",
-      "success": "#42b983",
-      "warning": "#e7c000",
-      "danger": "#cc0000",
-      "bg": "#ffffff",
-      "text": "#2c3e50",
-      "info": "#4f5959",
-      "bg-light": "#ffffff",
-      "bg-middle": "#f6f6f6",
-      "bg-dark": "#475050",
+      "primary": "#3BA575",
+      "success": "#3BA575",
+      "warning": "#DBBE00",
+      "danger": "#F56C6C",
+      "info": "#909399",
+      "text-dark": "#2c3e50",
       "text-light": "#ffffff",
-      "text-dark": "#2c3e50"
+      "bg": "#ffffff"
     },
     "dark": {
       "primary": "#42b983",
       "success": "#42b983",
       "warning": "#e7c000",
       "danger": "#cc0000",
-      "bg": "#121212",
-      "text": "#ffffff",
       "info": "#4f5959",
-      "bg-light": "#ffffff",
-      "bg-middle": "#f6f6f6",
-      "bg-dark": "#475050",
+      "text": "#ffffff",
+      "text-dark": "#2c3e50",
       "text-light": "#ffffff",
-      "text-dark": "#2c3e50"
+      "bg": "#121212"
     }
   }
 }
