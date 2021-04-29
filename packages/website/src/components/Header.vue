@@ -1,15 +1,15 @@
 <template>
   <n-row class="header" justify="space-evenly" align="center">
-    <n-col :span="5" @click="$router.push({ name: 'Home' })">
+    <n-col :span="6" @click="$router.push({ name: 'Home' })">
       <img src="@/assets/logo.png" class="logo" />
       <span class="hero-2">UI</span>
     </n-col>
-    <n-col :span="3">
+    <n-col :span="4">
       <span class="temp-h2">多语言: </span>
-      <n-link nounderline @click="setLanguage('zh-CN')">中文 </n-link>
+      <n-link nounderline @click="setLanguage('zh-CN')">中文 </n-link> ｜
       <n-link nounderline @click="setLanguage('en-US')">English </n-link>
     </n-col>
-    <n-col :span="3">
+    <n-col :span="5">
       <span class="temp-h2">链接: </span>
       <n-link
         color="primary"
@@ -19,6 +19,7 @@
         <n-icon i="github-fill" />
         GitHub
       </n-link>
+      ｜
       <n-link
         color="primary"
         href="https://www.npmjs.com/package/@nuilibrary/nui"
@@ -28,13 +29,14 @@
         npm
       </n-link>
     </n-col>
-    <n-col :span="6">
+    <n-col :span="5">
       <span class="temp-h2">主题: </span>
-      <n-link nounderline @click="changeDefaultTheme('dark')">深色</n-link>
+      <n-link nounderline @click="changeDefaultTheme('light')">浅色</n-link> ｜
+      <n-link nounderline @click="changeDefaultTheme('dark')">深色</n-link> ｜
+      <n-link nounderline @click="changeDefaultTheme('nenu')">NENU</n-link> ｜
       <n-link nounderline @click="changeDefaultTheme(['nenu', 'dark'])"
         >自动</n-link
       >
-      <n-link nounderline @click="changeDefaultTheme('nenu')">浅色</n-link>
     </n-col>
   </n-row>
 </template>
@@ -42,9 +44,12 @@
 <script>
 export default {
   methods: {
-    setLanguage(language) {
-      localStorage.NUI_LANGUAGE = language;
-      this.$router.push({ name: `${language}/Docs` });
+    setLanguage(newLanguage) {
+      const oldLanguage = localStorage.getItem('NUI_LANGUAGE');
+      const oldFullPath = this.$route.fullPath;
+      const newFullPath = oldFullPath.replace(oldLanguage, newLanguage);
+      localStorage.setItem('NUI_LANGUAGE', newLanguage);
+      this.$router.push(newFullPath);
     },
     changeDefaultTheme(defaultTheme) {
       localStorage.setItem('NUI_DEFAULT_THEME', JSON.stringify(defaultTheme));
