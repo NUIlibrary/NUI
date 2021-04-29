@@ -5,12 +5,12 @@
       <span class="hero-2">UI</span>
     </n-col>
     <n-col :span="3">
-      <span class="temp-h2">Languages: </span>
-      <span @click="setLanguage('zh-CN')">中文 </span>
-      <span @click="setLanguage('en-US')">English </span>
+      <span class="temp-h2">多语言: </span>
+      <n-link nounderline @click="setLanguage('zh-CN')">中文 </n-link>
+      <n-link nounderline @click="setLanguage('en-US')">English </n-link>
     </n-col>
-    <n-col :span="3"
-      >Link:
+    <n-col :span="3">
+      <span class="temp-h2">链接: </span>
       <n-link
         color="primary"
         href="https://github.com/NUIlibrary/NUI"
@@ -29,9 +29,12 @@
       </n-link>
     </n-col>
     <n-col :span="6">
-      <n-button @click="changeDefaultTheme('dark')">深色</n-button>
-      <n-button @click="changeDefaultTheme(['nenu', 'dark'])">自动</n-button>
-      <n-button @click="changeDefaultTheme('nenu')">浅色</n-button>
+      <span class="temp-h2">主题: </span>
+      <n-link nounderline @click="changeDefaultTheme('dark')">深色</n-link>
+      <n-link nounderline @click="changeDefaultTheme(['nenu', 'dark'])"
+        >自动</n-link
+      >
+      <n-link nounderline @click="changeDefaultTheme('nenu')">浅色</n-link>
     </n-col>
   </n-row>
 </template>
@@ -60,5 +63,9 @@ export default {
   img{
     height 2.5rem
   }
+  .temp-h2{
+    font-size 1.1rem
+    font-weight 900
+    }
 }
 </style>

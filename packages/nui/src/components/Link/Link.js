@@ -6,9 +6,9 @@ export default {
     color: {
       type: String
     },
-    underline: {
+    nounderline: {
       type: Boolean,
-      default: true,
+      default: false,
     },
     disabled: {
       type: Boolean,
@@ -23,7 +23,7 @@ export default {
           'n-link',
           this.$props.color?`text-${this.$props.color}`:null,
           {
-            'no-underline': !this.$props.underline || this.$props.disabled,
+            nounderline: this.$props.nounderline || this.$props.disabled,
             disabled: this.$props.disabled,
           },
         ],
