@@ -13,7 +13,8 @@ export default new NUI({
       "info": "#727171",
       "text-dark": "#2c3e50",
       "text-light": "#ffffff",
-      "bg": "#ffffff"
+      "bg": "#ffffff",
+      "fg": "#ffffff"
     },
   },
 });

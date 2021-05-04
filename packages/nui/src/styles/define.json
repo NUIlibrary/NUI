@@ -47,7 +47,8 @@
       "info": "#909399",
       "text-dark": "#2c3e50",
       "text-light": "#ffffff",
-      "bg": "#ffffff"
+      "bg": "#ffffff",
+      "fg": "#ffffff"
     },
     "dark": {
       "primary": "#42b983",
@@ -58,7 +59,8 @@
       "text": "#ffffff",
       "text-dark": "#2c3e50",
       "text-light": "#ffffff",
-      "bg": "#121212"
+      "bg": "#1f2937",
+      "fg": "#374151"
     }
   }
 }

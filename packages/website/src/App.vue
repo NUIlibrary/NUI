@@ -28,7 +28,7 @@ pre {
 
 .badge {
   border-color: var(--nui-color-primary);
-  background-color: var(--nui-color-bg-darken1);
+  background-color: var(--nui-color-fg-darken1);
   padding: 0.1rem 1.5rem;
   border-left-width: 0.5rem;
   border-left-style: solid;

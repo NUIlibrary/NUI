@@ -1,6 +1,6 @@
 <template>
   <n-row class="header" justify="space-evenly" align="center">
-    <n-col :span="6" @click="$router.push({ name: 'Home' })">
+    <n-col :span="5" @click="$router.push({ name: 'Home' })">
       <img src="@/assets/logo.png" class="logo" />
       <span class="hero-2">UI</span>
     </n-col>
@@ -14,7 +14,7 @@
       <n-link
         color="primary"
         href="https://github.com/NUIlibrary/NUI"
-        target="blank"
+        target="_blank"
       >
         <n-icon i="github-fill" />
         GitHub
@@ -23,13 +23,13 @@
       <n-link
         color="primary"
         href="https://www.npmjs.com/package/@nuilibrary/nui"
-        target="blank"
+        target="_blank"
       >
         <n-icon i="N" />
         npm
       </n-link>
     </n-col>
-    <n-col :span="5">
+    <n-col :span="6">
       <span class="temp-h2">主题: </span>
       <n-link nounderline @click="changeDefaultTheme('light')">浅色</n-link> ｜
       <n-link nounderline @click="changeDefaultTheme('dark')">深色</n-link> ｜
