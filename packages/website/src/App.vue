@@ -15,6 +15,11 @@
 import Header from '@/components/Header.vue';
 export default {
   components: { Header },
+  created() {
+    console.log(this.$nui);
+    const options = JSON.stringify(this.$nui.getOptions());
+    console.log(options);
+  },
 };
 </script>
 
