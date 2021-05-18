@@ -3,7 +3,7 @@ import NUI from '../../../nui/src/index';
 
 // 通过实例化类创建的方式，允许修改 NUI 的默认配置，如主题、颜色。
 export default new NUI({
-  defaultTheme: ['nenu', 'dark'],
+  defaultTheme: ['light', 'dark'],
   themes: {
     nenu: {
       "primary": "#003686",
