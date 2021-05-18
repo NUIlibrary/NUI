@@ -1,7 +1,7 @@
 {
   "name": "nuilibrary.online",
   "description": "NUI's website.",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "author": "Allen <Allen@NUILibrary.online>",
   "private": true,
   "scripts": {
@@ -9,7 +9,7 @@
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
     "docs:dir": "node ./scripts/generateDocsDir.js",
-    "docs:clear":"node ./scripts/clearDocComponents.js"
+    "docs:clear": "node ./scripts/clearDocComponents.js"
   },
   "dependencies": {
     "core-js": "^3.6.5",
