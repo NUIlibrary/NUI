@@ -13,6 +13,7 @@ class NUI {
   }
   // 直接调用类的方式，将通过该静态方法挂载
   static install = install;
+  static setCSSCustomProperties = setCSSCustomProperties;
   // 通过实例化类的方式，将通过该方法挂载
   install = install;
   setCSSCustomProperties = setCSSCustomProperties;
