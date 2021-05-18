@@ -1,7 +1,7 @@
 {
   "name": "nuilibrary.online",
   "description": "NUI's website.",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "author": "Allen <Allen@NUILibrary.online>",
   "private": true,
   "scripts": {
