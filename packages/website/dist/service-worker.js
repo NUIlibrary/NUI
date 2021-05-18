@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/precache-manifest.2f576b096a0342f72cf940dfa94e9e33.js"
+  "/precache-manifest.d651821c4cc061afd1446655dcf9d310.js"
 );
 
 workbox.core.setCacheNameDetails({prefix: "nuilibrary.online"});

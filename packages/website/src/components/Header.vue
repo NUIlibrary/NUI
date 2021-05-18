@@ -1,15 +1,15 @@
 <template>
   <n-row class="header" justify="space-evenly" align="center">
-    <n-col :span="5" @click="$router.push({ name: 'Home' })">
+    <n-col :span="5" :xs="20" @click="$router.push({ name: 'Home' })">
       <img src="@/assets/logo.png" class="logo" />
       <span class="hero-2">UI</span>
     </n-col>
-    <n-col :span="4">
+    <n-col :span="4" :xs="20">
       <span class="temp-h2">多语言: </span>
       <n-link nounderline @click="setLanguage('zh-CN')">中文 </n-link> ｜
       <n-link nounderline @click="setLanguage('en-US')">English </n-link>
     </n-col>
-    <n-col :span="5">
+    <n-col :span="5" :xs="20">
       <span class="temp-h2">链接: </span>
       <n-link
         color="primary"
@@ -29,7 +29,7 @@
         npm
       </n-link>
     </n-col>
-    <n-col :span="6">
+    <n-col :span="6" :xs="20">
       <span class="temp-h2">主题: </span>
       <n-link nounderline @click="changeDefaultTheme('light')">浅色</n-link> ｜
       <n-link nounderline @click="changeDefaultTheme('dark')">深色</n-link> ｜

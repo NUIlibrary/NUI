@@ -1,14 +1,15 @@
 <template>
   <n-row :gutter="20">
-    <n-col :span="3" :sm="3" :md="3">
+    <n-col :span="3" :xs="20" :sm="3">
       <div v-for="(groupItem, groupkey) in navList" :key="groupkey">
         <h3>{{ groupkey }}</h3>
-        <p v-for="(listItem, listKey) in groupItem" :key="listKey">
+        <span v-for="(listItem, listKey, index) in groupItem" :key="listKey">
           <n-link @click="goToPage(listKey)">{{ listKey }}</n-link>
-        </p>
+          <span v-if="index !== Object.keys(groupItem).length - 1"> | </span>
+        </span>
       </div>
     </n-col>
-    <n-col :span="17" :sm="17" :md="14">
+    <n-col :span="17" :xs="20" :sm="17">
       <router-view />
     </n-col>
   </n-row>
