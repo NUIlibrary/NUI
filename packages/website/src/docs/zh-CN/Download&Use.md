@@ -29,6 +29,7 @@ npm install @nuilibrary/nui --save
 
 ```javascript
 import NUI from "@nuilibrary/nui";
+import "@nuilibrary/nui/lib/nui.css";
 
 createApp(App)
   .use(NUI)
@@ -41,6 +42,7 @@ createApp(App)
 
 ```javascript
 import NUI from "@nuilibrary/nui";
+import "@nuilibrary/nui/lib/nui.css";
 
 const nui = new NUI({
   // Config...
